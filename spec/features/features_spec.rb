@@ -5,7 +5,7 @@ feature 'Visit bookmark page' do
   end
 
   scenario 'Expect to see links on the page' do
-    Link.create(url: 'http://www.bbc.co.uk/sport', title: 'BBC Sport')
+    Link.create(title: 'BBC Sport', url: 'http://www.bbc.co.uk/sport')
     visit('/')
     expect(page).to have_content('http://www.bbc.co.uk/sport')
   end

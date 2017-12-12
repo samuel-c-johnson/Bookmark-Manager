@@ -3,8 +3,20 @@
   <br />
   <h3> Here are you favourite links:</h3>
   <ul>
+
     <li>
-    <a href="http://www.bbc.co.uk/sport"target="_blank">http://www.bbc.co.uk/sport</a>
+      <p><% @links.each do |link|%>
+      <li><%= link.title %> <p>     </p><%="<a target='_blank' href=#{link.url}> #{link.url} </a>"%>
+      </li>  <% end %>
+
+      </p>
     </li>
   </ul>
+  <h3> Add a new link</h3>
+  <form method='post' action='/links'>
+    <input type='text' name='title' placeholder= 'Title' />
+    <input type='text' name='url' placeholder= 'URL' />
+    <input type='submit' value='Add'  />
+
+  </form>
 </html>
