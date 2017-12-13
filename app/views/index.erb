@@ -7,6 +7,7 @@
     <li>
       <p><% @links.each do |link|%>
       <li><%= link.title %> <p>   </p><%="<a target='_blank' href= http://#{link.url}> #{link.url} </a>"%>
+          <%= link.tag.map(&:name).join(' ,') %>
       </li>  <% end %>
 
       </p>
@@ -14,6 +15,7 @@
   </ul>
   <h3> Add a new link</h3>
   <form method='post' action='/links'>
+    <input type='text' name='tag' placeholder= 'Tag'  />
     <input type='text' name='title' placeholder= 'Title' />
     <input type='text' name='url' placeholder= 'URL' />
     <input type='submit' value='Add'  />

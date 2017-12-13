@@ -10,6 +10,7 @@ require 'database_cleaner'
 
 require './app/app.rb'
 require './app/models/link.rb'
+require './app/models/tag.rb'
 
 Capybara.app = BookmarkManager
 
@@ -44,7 +45,7 @@ end
 
 #Everything in this block runs once after each individual test
 config.after(:each) do
-  DatabaseCleaner.clean 
+  DatabaseCleaner.clean
 end
 
 
