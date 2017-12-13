@@ -4,6 +4,7 @@ feature 'Add links' do
     fill_in :url, with: 'www.allgigs.co.uk'
     fill_in :title, :with => 'gigs and tours'
     click_button 'Add'
-    expect(current_path).to eq '/links'
+    expect(current_path).to eq '/'
+    expect(page).to have_content 'www.allgigs.co.uk'
   end
 end
