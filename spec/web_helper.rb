@@ -1,4 +1,4 @@
-def fill_in_links
+def add_links
   visit ('/')
   fill_in :url, with: 'www.bbc.co.uk/sport'
   fill_in :title, with: 'BBC Sport'
@@ -9,3 +9,12 @@ def fill_in_links
   fill_in :tag, with: 'Search'
   click_button 'Add'
 end
+
+
+def fill_in_form_links
+  visit ('/')
+  fill_in :url, with: 'www.bbc.co.uk/sport'
+  fill_in :title, with: 'BBC Sport'
+
+end
+  
