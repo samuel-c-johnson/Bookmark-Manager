@@ -1,0 +1,6 @@
+<ul>
+  <% @links.each {|link| %>
+    <li>
+      <%= link.title %> <p>   </p><%="<a target='_blank' href= http://#{link.url}> #{link.url} </a>"%>
+    </li> <% } %>
+</ul>
