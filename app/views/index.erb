@@ -7,13 +7,13 @@
     <li>
       <p><% @links.each do |link|%>
       <li><%= link.title %> <p>   </p><%="<a target='_blank' href= http://#{link.url}> #{link.url} </a>"%>
-          <%= link.tag.map(&:name).join(' ,') %>
+          <%= link.tag.map(&:name) %>
       </li>  <% end %>
 
       </p>
     </li>
   </ul>
-  <h3> Add a new link</h3>
+  <h3> Add a new link:</h3>
   <form method='post' action='/links'>
     <input type='text' name='tag' placeholder= 'Tag'  />
     <input type='text' name='title' placeholder= 'Title' />
@@ -21,4 +21,11 @@
     <input type='submit' value='Add'  />
 
   </form>
+
+<h3> Search for links by tags: </h3>
+<form method='post' action='/search'>
+  <input type='text' name='tag_search' placeholder= 'Search tags' />
+  <input type='submit' value='search'  />
+</form>
+
 </html>

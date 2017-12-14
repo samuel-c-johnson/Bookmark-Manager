@@ -1,5 +1,7 @@
 require 'data_mapper'
 require 'dm-postgres-adapter'
+# require_relative '../data_mapper_setup'
+# require 'tag'
 
 class Link
   include DataMapper::Resource
@@ -7,6 +9,7 @@ class Link
   property :id,    Serial
   property :title, String
   property :url,   String
+
 
 
 
