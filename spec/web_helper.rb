@@ -17,4 +17,10 @@ def fill_in_form_links
   fill_in :title, with: 'BBC Sport'
 
 end
-  
+
+def log_in
+  visit ('/users/new')
+  fill_in :email, with: 'sam@email.com'
+  fill_in :password, with: 'passsword'
+  click_button ('Submit')
+end
